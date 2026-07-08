@@ -20,6 +20,6 @@
   ],
   "url": "https://github.com/davidkan1996/cpr-rolls",
   "manifest": "https://raw.githubusercontent.com/davidkan1996/cpr-rolls/edit/main/module.json",
-  "download": "https://github.com/davidkan1996/cpr-rolls/cpr-rolls.zip",
+  "download": "https://github.com/davidkan1996/cpr-rolls/blob/main/cpr-rolls.zip",
   "socket": true
 }
