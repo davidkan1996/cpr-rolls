@@ -18,5 +18,7 @@
   "styles": [
     "styles/cpr-rolls.css"
   ],
+  "url": "https://github.com/davidkan1996/cpr-rolls",
+  "manifest": "https://raw.githubusercontent.com/davidkan1996/cpr-rolls/edit/main/module.json",
   "socket": true
 }
