@@ -1,0 +1,317 @@
+#cpr-rolls-overlay,
+#cpr-rolls-outcome-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .94);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .35s ease;
+}
+
+#cpr-rolls-overlay.cpr-rolls-fade-out,
+#cpr-rolls-outcome-overlay.cpr-rolls-fade-out {
+    opacity: 0;
+}
+
+.cpr-rolls-overlay-shell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.cpr-rolls-scanline {
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background: repeating-linear-gradient(to bottom, rgba(255,0,60,.04), rgba(255,0,60,.04) 1px, transparent 2px, transparent 5px);
+}
+
+.cpr-rolls-container,
+.cpr-rolls-outcome-box {
+    position:relative;
+    width: 420px;
+    max-width: 90vw;
+    background:#000;
+    color:#ff2a2a;
+    border:3px solid #ff003c;
+    box-shadow:0 0 30px rgba(255,0,60,.55);
+    padding:34px;
+    text-align:center;
+    font-family:monospace;
+}
+
+.cpr-rolls-container-wide {
+    width: 760px;
+}
+
+.cpr-rolls-epic-mode .cpr-rolls-container {
+    border-color:#ffcc00;
+    box-shadow:0 0 45px rgba(255,204,0,.65);
+}
+
+.cpr-rolls-epic-mode h1 {
+    color:#ffcc00;
+}
+
+.cpr-rolls-outcome-success .cpr-rolls-outcome-box {
+    border-color:#00ff9d;
+    color:#00ff9d;
+    box-shadow:0 0 45px rgba(0,255,157,.65);
+}
+
+.cpr-rolls-outcome-failure .cpr-rolls-outcome-box {
+    border-color:#ff003c;
+    color:#ff003c;
+    box-shadow:0 0 45px rgba(255,0,60,.65);
+}
+
+.cpr-rolls-kicker,
+.cpr-rolls-chat-kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: .85;
+    margin-bottom: 8px;
+}
+
+.cpr-rolls-container h1,
+.cpr-rolls-outcome-box h1 {
+    margin: 0 0 20px;
+    color:#ff003c;
+    letter-spacing:2px;
+}
+
+.cpr-rolls-portrait {
+    width:160px;
+    height:160px;
+    object-fit:cover;
+    border:2px solid #ff003c;
+    box-shadow:0 0 18px rgba(255,0,60,.45);
+}
+
+.cpr-rolls-actor {
+    margin-top: 10px;
+    color:#fff;
+    font-size:18px;
+}
+
+.cpr-rolls-skill {
+    font-size:30px;
+    color:#ff003c;
+    margin-top:16px;
+    text-transform:uppercase;
+}
+
+.cpr-rolls-dv {
+    font-size:22px;
+    color:#fff;
+    margin:8px 0 18px;
+}
+
+.cpr-rolls-standby {
+    color:#ffcc00;
+    border:1px solid #ffcc00;
+    padding:8px;
+    margin-top:12px;
+}
+
+.cpr-rolls-main-button,
+.cpr-rolls-character-roll,
+.cpr-rolls-panel button {
+    background:#ff003c;
+    color:#000;
+    border:0;
+    padding:6px 10px;
+    font-weight:bold;
+    cursor:pointer;
+    font-family:monospace;
+}
+
+.cpr-rolls-main-button:hover,
+.cpr-rolls-character-roll:hover,
+.cpr-rolls-panel button:hover {
+    background:#ff2a2a;
+}
+
+.cpr-rolls-character-roll:disabled {
+    opacity: .45;
+    cursor: default;
+}
+
+.cpr-rolls-multi-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap:14px;
+    margin-top: 18px;
+}
+
+.cpr-rolls-multi-card {
+    border:1px solid #aa003355;
+    padding:10px;
+    background:#050505;
+}
+
+.cpr-rolls-multi-portrait {
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border:2px solid #ff003c;
+}
+
+.cpr-rolls-multi-name {
+    color:#fff;
+    margin:8px 0;
+}
+
+.cpr-rolls-character-status {
+    margin-top:8px;
+    font-size:12px;
+    color:#ffcc00;
+}
+
+.cpr-rolls-status-success {
+    color:#00ff9d;
+}
+
+.cpr-rolls-status-partial {
+    color:#ffcc00;
+}
+
+.cpr-rolls-status-failure {
+    color:#ff003c;
+}
+
+.cpr-rolls-panel {
+    background:#000;
+    color:#ff2a2a;
+    padding:12px;
+    font-family:monospace;
+    border:1px solid #aa003355;
+}
+
+.cpr-rolls-panel-title {
+    font-size:22px;
+    color:#ff003c;
+    margin-bottom:10px;
+}
+
+.cpr-rolls-panel select {
+    width:100%;
+    background:#000;
+    color:#ff2a2a;
+    border:1px solid #aa003388;
+    padding:4px;
+    margin:4px 0 10px;
+}
+
+.cpr-rolls-quick-row,
+.cpr-rolls-button-row,
+.cpr-rolls-mode-box {
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+}
+
+.cpr-rolls-quick-row button {
+    font-size:11px;
+    padding:4px 6px;
+}
+
+.cpr-rolls-check {
+    display:block;
+    margin: 6px 0;
+}
+
+.cpr-rolls-epic-check {
+    color:#ffcc00;
+}
+
+.cpr-rolls-player-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:6px;
+}
+
+.cpr-rolls-player-card {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    border:1px solid #aa003333;
+    padding:4px;
+}
+
+.cpr-rolls-player-card img {
+    width:28px;
+    height:28px;
+    object-fit:cover;
+    border:1px solid #aa003355;
+}
+
+.cpr-rolls-results-title {
+    color:#ff003c;
+    margin-bottom:6px;
+}
+
+.cpr-rolls-results {
+    width:100%;
+    border-collapse:collapse;
+}
+
+.cpr-rolls-results th,
+.cpr-rolls-results td {
+    border-bottom:1px solid #aa003333;
+    padding:4px;
+    text-align:left;
+}
+
+.cpr-rolls-chat-card,
+.cpr-rolls-group-card {
+    background:#000 !important;
+    padding:10px;
+    font-family:monospace;
+}
+
+.cpr-rolls-chat-success,
+.cpr-rolls-group-success {
+    color:#00ff9d;
+    border:2px solid #00ff9d;
+}
+
+.cpr-rolls-chat-partial {
+    color:#ffcc00;
+    border:2px solid #ffcc00;
+}
+
+.cpr-rolls-chat-failure,
+.cpr-rolls-group-failure {
+    color:#ff003c;
+    border:2px solid #ff003c;
+}
+
+.cpr-rolls-sound-note {
+    opacity:.7;
+    font-size:11px;
+    margin-top:10px;
+}
+
+.cpr-rolls-rule-note,
+.cpr-rolls-breakdown {
+    font-size:11px;
+    opacity:.8;
+    margin-top:6px;
+}
+
+.cpr-rolls-crit-good {
+    color:#00ff9d;
+    margin-top:6px;
+}
+
+.cpr-rolls-crit-bad {
+    color:#ff003c;
+    margin-top:6px;
+}

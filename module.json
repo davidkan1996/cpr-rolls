@@ -1,0 +1,22 @@
+{
+  "id": "cpr-rolls",
+  "title": "CPR Rolls",
+  "description": "Cyberpunk RED popup roll requests with fullscreen player overlays, Dice So Nice support, multi-character user support, auto group resolution, Epic mode, and exploding d10 mechanics.",
+  "version": "4.2.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "authors": [
+    {
+      "name": "Sleepingman"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/cpr-rolls.css"
+  ],
+  "socket": true
+}

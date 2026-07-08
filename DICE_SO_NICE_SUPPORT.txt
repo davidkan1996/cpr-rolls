@@ -1,0 +1,1 @@
+CPR Rolls v4.2.0 adds optional Dice So Nice support. If Dice So Nice is active, each d10 rolled by CPR Rolls will trigger the 3D dice animation. If it is inactive, CPR Rolls works normally.
